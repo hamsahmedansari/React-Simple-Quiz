@@ -1,0 +1,10 @@
+@import "../../utilities/variable.scss";
+
+.login {
+  background: $primary;
+  padding: 1em;
+  > div {
+    min-height: 400px;
+    background: #fff;
+  }
+}

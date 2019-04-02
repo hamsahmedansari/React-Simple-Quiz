@@ -1,0 +1,143 @@
+@import "../../../utilities/variable.scss";
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: $logo-color;
+  color: $logo-color-inverse;
+  > :nth-child(1) {
+    > div {
+      //   Logo
+      position: relative;
+      padding: 10px;
+      padding-right: 15px;
+      margin-right: 5px;
+      overflow: hidden;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background: #fff;
+        z-index: -1;
+      }
+      &::before {
+        transform: translateX(100%) translateY(0%);
+        top: 0;
+        left: 95%;
+        width: 2px;
+        height: 100%;
+        display: block;
+        animation: loading 2s ease-in-out infinite;
+      }
+    }
+  }
+  > :nth-child(2) {
+    transition: all ease-in-out 0.3s;
+    transform: translateX(-110%);
+    opacity: 0;
+    > p {
+      font-size: 12px;
+    }
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(110%) translateY(0);
+    top: 0;
+    left: 2%;
+    width: 100%;
+    height: 2px;
+    display: block;
+  }
+
+  25% {
+    transform: translateX(-110%) translateY(0);
+    top: 0;
+    left: 2%;
+    width: 100%;
+    height: 2px;
+    display: block;
+  }
+  26% {
+    transform: translateX(-110%) translateY(0);
+    top: 0;
+    left: 2%;
+    width: 100%;
+    height: 2px;
+    display: none;
+  }
+  27% {
+    transform: translateX(-110%) translateY(-110%);
+    top: 0;
+    left: 2%;
+    width: 2px;
+    height: 100%;
+    display: none;
+  }
+
+  50% {
+    transform: translateX(-110%) translateY(110%);
+    top: 0;
+    left: 2%;
+    width: 2px;
+    height: 100%;
+    display: block;
+  }
+  51% {
+    transform: translateX(-110%) translateY(110%);
+    top: 0;
+    left: 2%;
+    width: 2px;
+    height: 100%;
+    display: none;
+  }
+  52% {
+    transform: translateX(-110%) translateY(-110%);
+    top: 95%;
+    left: 2%;
+    width: 100%;
+    height: 2px;
+    display: none;
+  }
+
+  75% {
+    transform: translateX(110%) translateY(-110%);
+    top: 95%;
+    left: 2%;
+    width: 100%;
+    height: 2px;
+    display: block;
+  }
+  76% {
+    transform: translateX(110%) translateY(-110%);
+    top: 95%;
+    left: 2%;
+    width: 100%;
+    height: 2px;
+    display: none;
+  }
+  77% {
+    transform: translateX(110%) translateY(110%);
+    top: 0;
+    left: 95%;
+    width: 2px;
+    height: 100%;
+    display: none;
+  }
+
+  100% {
+    transform: translateX(110%) translateY(-110%);
+    top: 0;
+    left: 95%;
+    width: 2px;
+    height: 100%;
+    display: block;
+  }
+}
