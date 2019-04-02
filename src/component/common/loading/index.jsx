@@ -5,7 +5,11 @@ import "./style.scss";
 const Loading = props => {
   const { status: isComplete } = props;
   return (
-    <div className="flex-align-item-center flex-container flex-justify-center loading">
+    <div
+      className={`flex-align-item-center flex-container flex-justify-center loading ${
+        isComplete ? "complete" : ""
+      }`}
+    >
       <div className="item">
         <div className={`logo ${isComplete ? "complete" : "incomplete"}`}>
           <h1>
@@ -13,7 +17,7 @@ const Loading = props => {
           </h1>
         </div>
       </div>
-      <div className="item">
+      <div className={`item ${isComplete ? "active" : ""}`}>
         <p>Page Name</p>
       </div>
     </div>

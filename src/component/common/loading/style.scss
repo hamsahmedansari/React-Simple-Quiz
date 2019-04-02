@@ -7,6 +7,10 @@
   left: 0;
   background: $logo-color;
   color: $logo-color-inverse;
+  > div {
+    transition: all ease-in-out 1s;
+    transition-delay: 1s;
+  }
   > :nth-child(1) {
     > div {
       //   Logo
@@ -54,6 +58,14 @@
     &.active {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+  //   complete animation
+  &.complete {
+    > div {
+      transform: scale(5) rotate(180deg);
+      opacity: 0;
+      filter: blur(100px);
     }
   }
 }
