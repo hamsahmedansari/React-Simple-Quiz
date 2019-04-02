@@ -15,21 +15,32 @@
       padding-right: 15px;
       margin-right: 5px;
       overflow: hidden;
-      &::before,
-      &::after {
+      &::before {
         content: "";
         position: absolute;
         background: #fff;
         z-index: -1;
-      }
-      &::before {
-        transform: translateX(100%) translateY(0%);
+        transform: translateX(100%) translateY(100%);
         top: 0;
         left: 95%;
         width: 2px;
         height: 100%;
         display: block;
-        animation: loading 2s ease-in-out infinite;
+        transition: all ease-in-out 0.3s;
+      }
+      &.incomplete {
+        &::before {
+          // transform: translateX(100%) translateY(0);
+          animation: loading 2s ease-in-out infinite;
+          //   animation-play-state: unset;
+        }
+      }
+      &.complete {
+        &::before {
+          transform: translateX(100%) translateY(0) !important;
+          animation: loadingComplete 0.5s ease-in-out 1;
+          //   animation-delay: 0.3s;
+        }
       }
     }
   }
@@ -139,5 +150,14 @@
     width: 2px;
     height: 100%;
     display: block;
+  }
+}
+
+@keyframes loadingComplete {
+  0% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%) translateY(0);
   }
 }

@@ -6,11 +6,19 @@ import "./App.scss";
 import Loading from "./component/common/loading";
 
 class App extends Component {
+  state = {
+    loading: false
+  };
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ loading: true });
+    }, 5000);
+  }
   render() {
     return (
       <div className="App">
         {/* <Login /> */}
-        <Loading />
+        <Loading status={this.state.loading} />
       </div>
     );
   }
