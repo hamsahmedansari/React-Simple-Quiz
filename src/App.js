@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all";
 import "./App.scss";
-// import Login from "./component/login";
+import Login from "./component/login";
 import Loading from "./component/common/loading";
 
 class App extends Component {
@@ -10,15 +10,17 @@ class App extends Component {
     loading: false
   };
   componentDidMount() {
+    const { loading } = this.state;
     setTimeout(() => {
-      this.setState({ loading: true });
+      this.setState({ loading: !loading });
     }, 5000);
   }
   render() {
     return (
       <div className="App">
-        {/* <Login /> */}
+        <Login />
         <Loading status={this.state.loading} />
+        {/* <Loading status/> */}
       </div>
     );
   }

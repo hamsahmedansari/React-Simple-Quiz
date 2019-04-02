@@ -7,9 +7,11 @@
   left: 0;
   background: $logo-color;
   color: $logo-color-inverse;
+  transition: all ease-in-out 0.5s;
+  transition-delay: 2s;
   > div {
     transition: all ease-in-out 1s;
-    transition-delay: 1s;
+    transition-delay: 1.5s;
   }
   > :nth-child(1) {
     > div {
@@ -49,19 +51,22 @@
     }
   }
   > :nth-child(2) {
-    transition: all ease-in-out 0.3s;
-    transform: translateX(-110%);
-    opacity: 0;
-    > p {
-      font-size: 12px;
-    }
-    &.active {
-      opacity: 1;
-      transform: translateX(0);
+    > div {
+      transition: all ease-in-out 0.3s;
+      transform: translateX(-110%);
+      opacity: 0;
+      > p {
+        font-size: 12px;
+      }
+      &.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
   }
   //   complete animation
   &.complete {
+    opacity: 0;
     > div {
       transform: scale(5) rotate(180deg);
       opacity: 0;
