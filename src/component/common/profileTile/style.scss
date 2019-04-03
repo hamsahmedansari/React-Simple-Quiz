@@ -1,0 +1,26 @@
+.profileTile {
+  background: #0288d1;
+  margin: 1em;
+  color: #fff;
+  padding: 1em;
+  box-shadow: 0 0 7px 1px #444;
+  border-radius: 8px;
+  width: 150px;
+  height: 130px;
+  img {
+    width: 100px;
+    // display: ;
+  }
+  h1 {
+    font-size: 70px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 13px;
+  }
+  > div {
+    > div {
+      margin: 5px 0;
+    }
+  }
+}

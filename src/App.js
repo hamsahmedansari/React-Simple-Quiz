@@ -7,19 +7,19 @@ import Loading from "./component/common/loading";
 
 class App extends Component {
   state = {
-    loading: false
+    // loading: false
   };
   componentDidMount() {
-    const { loading } = this.state;
-    setTimeout(() => {
-      this.setState({ loading: !loading });
-    }, 5000);
+    // const { loading } = this.state;
+    // setTimeout(() => {
+    //   this.setState({ loading: !loading });
+    // }, 5000);
   }
   render() {
     return (
       <div className="App">
         <Login />
-        <Loading status={this.state.loading} />
+        {/* <Loading status={this.state.loading} /> */}
         {/* <Loading status/> */}
       </div>
     );
