@@ -7,8 +7,14 @@
     // background: $primary;
     min-height: 400px;
     padding: 1em;
-    h1 {
-      // color: #fff;
+    > :nth-child(1) {
+      h1 {
+        color: #212121;
+        svg,
+        path {
+          color: red;
+        }
+      }
     }
     > :nth-child(2) {
       margin-top: 1em;

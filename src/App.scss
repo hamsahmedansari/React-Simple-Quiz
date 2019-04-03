@@ -4,8 +4,11 @@
   margin: 0;
   padding: 0;
 }
-*:not(i) {
+*:not(i),
+*:not(svg),
+*:not(path) {
   font-family: "Ubuntu", sans-serif;
+  color: #212121;
 }
 .text-center {
   text-align: center;
