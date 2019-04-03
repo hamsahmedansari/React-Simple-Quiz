@@ -3,7 +3,7 @@
   margin: 1em;
   color: #fff;
   padding: 1em;
-  box-shadow: 0 0 7px 1px #444;
+  box-shadow: 0 0 7px 1px #bdbdbd;
   border-radius: 8px;
   width: 150px;
   height: 130px;
@@ -22,5 +22,23 @@
     > div {
       margin: 5px 0;
     }
+  }
+  &.color-1 {
+    background: #00bcd4;
+  }
+  &.color-3 {
+    background: #0288d1;
+  }
+  &.color-5 {
+    background: #303f9f;
+  }
+  &.color-7 {
+    background: #f57c00;
+  }
+  &.color-8 {
+    background: #ff5722;
+  }
+  &.color-9 {
+    background: #d32f2f;
   }
 }
