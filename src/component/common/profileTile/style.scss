@@ -6,7 +6,10 @@
   box-shadow: 0 0 7px 1px #bdbdbd;
   border-radius: 8px;
   width: 150px;
+  border: 1px solid rgba(0, 0, 0, 0);
   height: 130px;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
   img {
     width: 100px;
     // display: ;
@@ -14,13 +17,16 @@
   h1 {
     font-size: 70px;
     color: #fff;
+    transition: all ease-in-out 0.3s;
     font-weight: 400;
   }
   p {
     font-size: 13px;
+    transition: all ease-in-out 0.3s;
     color: #fff;
   }
   path {
+    transition: all ease-in-out 0.3s;
     color: #fff;
   }
   > div {
@@ -28,22 +34,77 @@
       margin: 5px 0;
     }
   }
-  &.color-1 {
+  & &.color-1 {
     background: #00bcd4;
   }
   &.color-3 {
     background: #0288d1;
+    &:hover {
+      background: #fff;
+      box-shadow: 0 0 7px 1px #0288d1;
+      border: 1px solid #0288d1;
+      transform: scale(1.1);
+      h1,
+      p,
+      path {
+        color: #0288d1;
+      }
+    }
   }
   &.color-5 {
     background: #303f9f;
+    &:hover {
+      background: #fff;
+      box-shadow: 0 0 7px 1px #303f9f;
+      border: 1px solid #303f9f;
+      transform: scale(1.1);
+      h1,
+      p,
+      path {
+        color: #303f9f;
+      }
+    }
   }
   &.color-7 {
     background: #f57c00;
+    &:hover {
+      background: #fff;
+      box-shadow: 0 0 7px 1px #f57c00;
+      border: 1px solid #f57c00;
+      transform: scale(1.1);
+      h1,
+      p,
+      path {
+        color: #f57c00;
+      }
+    }
   }
   &.color-8 {
     background: #ff5722;
+    &:hover {
+      background: #fff;
+      box-shadow: 0 0 7px 1px #ff5722;
+      border: 1px solid #ff5722;
+      transform: scale(1.1);
+      h1,
+      p,
+      path {
+        color: #ff5722;
+      }
+    }
   }
   &.color-9 {
     background: #d32f2f;
+    &:hover {
+      background: #fff;
+      box-shadow: 0 0 7px 1px #d32f2f;
+      border: 1px solid #d32f2f;
+      transform: scale(1.1);
+      h1,
+      p,
+      path {
+        color: #d32f2f;
+      }
+    }
   }
 }

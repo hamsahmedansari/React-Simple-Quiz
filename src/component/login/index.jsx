@@ -7,6 +7,25 @@ class Login extends Component {
     super(props);
     this.state = {};
   }
+
+  componentDidMount() {
+    const profileTile = document.querySelectorAll(".profileTile");
+    profileTile.forEach(element => {
+      element.addEventListener("mouseover", () => {
+        profileTile.forEach(innerElement => {
+          innerElement.classList.add("inActive");
+        });
+        element.classList.remove("inActive");
+      });
+      element.addEventListener("mouseleave", () => {
+        profileTile.forEach(innerElement => {
+          innerElement.classList.remove("inActive");
+        });
+        // element.classList.remove("inActive");
+      });
+    });
+  }
+
   render() {
     const TempProfileTile = [];
     const name = [
@@ -56,6 +75,7 @@ class Login extends Component {
                 rating={profile.rating}
                 username={profile.username}
                 key={i}
+                mouseEnter={this.handleMouseEnter}
               />
             ))}
           </div>

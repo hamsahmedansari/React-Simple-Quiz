@@ -18,6 +18,12 @@
     }
     > :nth-child(2) {
       margin-top: 1em;
+      > div {
+        &.inActive {
+          transform: scale(0.8);
+          filter: blur(4px);
+        }
+      }
     }
   }
 }
