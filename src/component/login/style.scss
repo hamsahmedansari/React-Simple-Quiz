@@ -23,6 +23,26 @@
           transform: scale(0.8);
           filter: blur(4px);
         }
+        &.add {
+          background: #fff;
+          // box-shadow: 0 0 7px 1px #7b1fa2;
+          border: 1px solid #7b1fa2;
+          // transform: scale(1.1);
+          h1,
+          p,
+          path {
+            color: #7b1fa2;
+          }
+          p {
+            height: 0px;
+            overflow: hidden;
+          }
+          &:hover {
+            p {
+              height: 100%;
+            }
+          }
+        }
       }
     }
   }

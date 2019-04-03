@@ -70,6 +70,12 @@ class Login extends Component {
             </h1>
           </div>
           <div className="flex-align-item-center flex-container flex-justify-center flex-row item w-100 flex-wrap">
+            <div className="flex-align-item-center flex-column flex-container flex-justify-center flex-wrap profileTile add">
+              <div className="item text-center">
+                <i className="fas fa-plus" style={{ fontSize: "30px" }} />{" "}
+                <p style={{ paddingTop: "2px" }}>New User</p>
+              </div>
+            </div>
             {profiles.map((profile, i) => (
               <ProfileTile
                 rating={profile.rating}
