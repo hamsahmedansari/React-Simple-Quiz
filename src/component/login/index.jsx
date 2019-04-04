@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import "./style.scss";
 import ProfileTile from "../common/profileTile";
+import Model from "../common/model";
 
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      model: false
+    };
   }
-
+  handelModel = pram => {
+    this.setState(preState => ({
+      ...preState,
+      model: pram
+    }));
+  };
   componentDidMount() {
     const profileTile = document.querySelectorAll(".profileTile");
     profileTile.forEach(element => {
@@ -27,6 +35,7 @@ class Login extends Component {
   }
 
   render() {
+    const { model } = this.state;
     const TempProfileTile = [];
     const name = [
       "Ira Frederick  ",
@@ -70,7 +79,10 @@ class Login extends Component {
             </h1>
           </div>
           <div className="flex-align-item-center flex-container flex-justify-center flex-row item w-100 flex-wrap">
-            <div className="flex-align-item-center flex-column flex-container flex-justify-center flex-wrap profileTile add">
+            <div
+              className="flex-align-item-center flex-column flex-container flex-justify-center flex-wrap profileTile add"
+              onClick={() => this.handelModel(true)}
+            >
               <div className="item text-center">
                 <i className="fas fa-plus" style={{ fontSize: "30px" }} />{" "}
                 <p style={{ paddingTop: "2px" }}>New User</p>
@@ -86,6 +98,32 @@ class Login extends Component {
             ))}
           </div>
         </div>
+        {/* Model */}
+        {model && (
+          <Model>
+            <section>
+              {/* UserName */}
+              <input
+                type="text"
+                placeholder="Enter UserName"
+                className="w-100"
+              />
+              <select name="" id="">
+                <option value="">Admin</option>
+                <option value="">User</option>
+              </select>
+            </section>
+            <footer>
+              <button className="btn">Create</button>
+              <button
+                className="btn danger"
+                onClick={() => this.handelModel(false)}
+              >
+                Cancel
+              </button>
+            </footer>
+          </Model>
+        )}
       </div>
     );
   }

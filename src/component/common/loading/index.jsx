@@ -49,7 +49,7 @@ class Loading extends Component {
           <div className="item">
             <div className={`logo ${isComplete ? "complete" : "incomplete"}`}>
               <h1>
-                <i className="fab fa-affiliatetheme" />{" "}
+                <i className="fab fa-affiliatetheme" />
                 <span>Skill Enhancer</span>
               </h1>
             </div>

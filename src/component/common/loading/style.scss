@@ -9,6 +9,13 @@
   color: $logo-color-inverse;
   transition: all ease-in-out 0.5s;
   transition-delay: 2s;
+  h1,
+  path,
+  svg,
+  p,
+  span {
+    color: #fff;
+  }
   > div {
     transition: all ease-in-out 1s;
     transition-delay: 1.5s;

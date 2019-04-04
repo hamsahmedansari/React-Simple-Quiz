@@ -4,23 +4,41 @@ import "@fortawesome/fontawesome-free/js/all";
 import "./App.scss";
 import Login from "./component/login";
 import Loading from "./component/common/loading";
+import Model from "./component/common/model";
 
 class App extends Component {
   state = {
-    // loading: false
+    // loading: false,
+    model: {
+      isVisible: false,
+      section: null,
+      footer: null
+    }
   };
   componentDidMount() {
     // const { loading } = this.state;
     // setTimeout(() => {
     //   this.setState({ loading: !loading });
-    // }, 5000);
+    // }, 1000);
+  }
+  componentDidUpdate(prevProps, prevState) {
+    // const { loading } = this.state;
+    // setTimeout(() => {
+    //   this.setState({ loading: !loading });
+    // }, 1000);
   }
   render() {
+    const { loading, model } = this.state;
     return (
       <div className="App">
-        <Login />
-        {/* <Loading status={this.state.loading} /> */}
-        {/* <Loading status/> */}
+        <div className="pages">
+          <Login model={this.createModel} />
+        </div>
+        <div className="common">
+          {/* <Loading status={this.state.loading} /> */}
+          {/* {this.state.loading && <Model />} */}
+          {/* Model */}
+        </div>
       </div>
     );
   }

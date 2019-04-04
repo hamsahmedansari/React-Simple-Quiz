@@ -19,3 +19,36 @@
 .w-100 {
   width: 100%;
 }
+.App {
+  > .pages {
+    transition: all ease-in-out 0.3s;
+    &.notActive {
+      filter: blur(8px);
+    }
+  }
+}
+
+.btn {
+  border: 0;
+  background: #0288d1;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 0 0 8px 1px #444;
+  margin: auto;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  margin: 5px;
+  &:active,
+  &:focus {
+    border: 0;
+    outline: 0;
+  }
+  &:hover {
+    border-radius: 10px;
+    transform: scale(1.1);
+  }
+  &.danger {
+    background: #d32f2f;
+  }
+}

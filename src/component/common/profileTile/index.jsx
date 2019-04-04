@@ -3,6 +3,7 @@ import "./style.scss";
 
 const ProfileTile = props => {
   const { username, rating } = props;
+
   return (
     <div
       className={`flex-align-item-space-between flex-column flex-container flex-justify-space-between flex-wrap profileTile
